@@ -1,1 +1,36 @@
-<h1> Test Websites </h1>
+<!DOCTYPE html> 
+<html> 
+<body>
+<style>
+  .slds-visual-picker_vertical .slds-visual-picker__figure {
+      height: inherit !important;
+  }
+
+  .runtime_appointmentbookingFlowLocation .slds-visual-picker_vertical {
+      display: inline-flex !important;
+  }
+</style>
+<script src="https://pophealth--marygrace.sandbox.my.site.com/AIR/lightning/lightning.out.js"></script>
+<script>
+  $Lightning.use("runtime_appointmentbooking:lightningOutGuest", // name of the Lightning app 
+    function() {
+      $Lightning.createComponent(
+        "lightning:flow"
+        , { }
+        , "lexcontainer" 
+        , function(cmp) { 
+          cmp.startFlow('Schedule_Web_Guest_Appointment'); 
+        }
+      ); 
+    }
+    , 'https://pophealth--marygrace.sandbox.my.site.com/AIR' 
+  ); 
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<div id="lexcontainer">
+  <p>Invoke the Lightning Component specified in the script.</p>
+</div>
+</body>
+</html>
